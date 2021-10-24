@@ -7,6 +7,7 @@ const passport = require('passport');
 //Initializations
 
 const app = express();
+require('./lib/passport');
 
 //Settings
 
