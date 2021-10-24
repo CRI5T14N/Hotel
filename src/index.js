@@ -2,12 +2,10 @@ const express = require('express');
 const morgan = require('morgan');
 const exphbs = require('express-handlebars');
 const path = require('path');
-const passport = require('passport');
 
 //Initializations
 
 const app = express();
-require('./lib/passport');
 
 //Settings
 
@@ -27,8 +25,6 @@ app.set('view engine', '.hbs');
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
-app.use(passport.initialize());
-app.use(passport.session());
 
 //Global Variables
 
