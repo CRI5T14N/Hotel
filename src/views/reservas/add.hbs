@@ -1,0 +1,36 @@
+<link rel="stylesheet" type="text/css" href="/css/add.css">
+
+{{> navigation}}
+
+<div class="container">
+    <div class="info-container">
+        <div class="room-title">Reservar</div>
+        <div class="room-img">
+            <img src="{{datos.img1}}" alt="">
+            <img src="{{datos.img2}}" alt="">
+        </div>
+    </div>
+    
+
+    <div class="form-container">
+        <div class="form-container-2">
+            <form action="/reservas/add" method="post">
+                <div class="fe-cont">
+                    <label class="date">Fecha de Entrada:</label>
+                    <input type="date" class="date" name="fecha_entrada">
+                </div>
+                <div class="fs-cont">
+                    <label class="date">Fecha de Salida:</label>
+                    <input type="date" class="date" name="fecha_salida">
+                </div>
+                <div class="button-cont">
+                    <button class="confirm-button">
+                        Confirmar Reservación
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>                    
+</div>
+
+{{> footer}}

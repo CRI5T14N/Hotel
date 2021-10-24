@@ -1,0 +1,107 @@
+<link rel="stylesheet" type="text/css" href="/css/rooms.css">
+
+{{> navigation}}
+
+<div class="container">
+    <div class="main-container">
+        
+        <div class="simple-rooms-container">
+            <h2 class="seccion-title">Habitaciones simples</h2>
+            <div class="simple-rooms-container__img">
+
+                <form action="/habitaciones/habitacion" method="POST">
+                    <img src="/img/simple1.jpg" title="Habitación 1" name="hab1">
+                    <input type="text" name="idhab" value="1" class="numh">
+                    <input type="submit" class="send" value="Ver">
+                </form>
+
+                <form action="/habitaciones/habitacion" method="POST">
+                    <img src="/img/simple2.jpg" title="Habitación 2">
+                    <input type="text" name="idhab" value="2" class="numh">
+                    <input type="submit" class="send" value="Ver">
+                </form>  
+                
+                <form action="/habitaciones/habitacion" method="POST">
+                    <img src="/img/simple3.jpg" title="Habitación 3">    
+                    <input type="text" name="idhab" value="3" class="numh">
+                    <input type="submit" class="send" value="Ver">
+                </form>
+            
+            </div>
+        </div>
+
+        <div class="double-rooms-container">
+            <h2 class="seccion-title">Habitaciones Dobles</h2>
+            <div class="double-rooms-container__img">
+                <form action="/habitaciones/habitacion" method="POST">
+                        <img src="/img/doble1.jpg" title="Habitacion 1">
+                        <input type="text" name="idhab" value="4" class="numh">
+                        <input type="submit" class="send" value="Ver">
+                    </form>
+
+
+
+                <form action="/habitaciones/habitacion" method="POST">
+                        <img src="/img/doble2.jpg" title="Habitacion 2">
+                        <input type="text" name="idhab" value="5" class="numh">
+                        <input type="submit" class="send" value="Ver">
+                    </form>
+
+
+                <form action="/habitaciones/habitacion" method="POST">
+                        <img src="/img/doble3.jpg" title="Habitacion 3"> 
+                        <input type="text" name="idhab" value="6" class="numh">
+                        <input type="submit" class="send" value="Ver">
+                </form>     
+                  
+            </div>
+        </div>
+
+        <div class="triple-rooms-container">
+            <h2 class="seccion-title">Habitaciones Triples</h2>
+                <div class="triple-rooms-container__img">
+
+                    <form action="/habitaciones/habitacion" method="POST">
+                        <img src="/img/triples1.jpg" title="Habitacion 1">  
+                        <input type="text" name="idhab" value="7" class="numh">
+                        <input type="submit" class="send" value="Ver">
+                    </form>
+                    
+
+                    <form action="/reservar/habitacion" method="POST">
+                        <img src="/img/triples2.jpg" title="Habitacion 2">
+                        <input type="text" name="idhab" value="8" class="numh">
+                        <input type="submit" class="send" value="Ver">
+                    </form>
+                    
+                    <form action="/reservar/habitacion" method="POST">
+                        <img src="/img/triples3.jpg" title="Habitacion 3">
+                        <input type="text" name="idhab" value="9" class="numh">
+                        <input type="submit" class="send" value="Ver">
+                    </form>
+
+                </div>       
+        </div>
+
+                <div class="quadruple-rooms-container">
+                    <a href="">
+                        <h2 class="seccion-title">Habitaciones Cuadruples</h2>
+                        <div class="quadruple-rooms-container__img">
+                            <img src="/img/cuadruple1.jpg" title="Habitacion 1">
+                            <img src="/img/cuadruple2.jpg" title="Habitacion 2">
+                            <img src="/img/cuadruple3.jpg" title="Habitacion 3">
+                        </div>
+                    </a> 
+                </div>
+
+                <!--<div class="especial-rooms-container">
+                    <h2>Habitaciones Especiales</h2>
+                    <img src="../img/.jpg" title="Habitacion 1">
+                    <img src="../img/.jpg" title="Habitacion 1">
+                    <img src="../img/.jpg" title="Habitacion 1">
+                </div>-->
+
+    </div>
+</div>
+
+{{> footer}}
