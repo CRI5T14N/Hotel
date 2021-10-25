@@ -4,17 +4,18 @@ const pool = require('../database');
 const helpers = require('../lib/helpers');
 
 passport.use('local.signup', new LocalStrategy({
-    emailField: 'email',
+    usernameField: 'email',
     passwordField: 'password',
     passReqToCallback: true
 }, async (req, email, password, done) => {
-    const { fullname, username } = req.body;
+    const { nombreCliente, userNameCliente } = req.body;
     const newUser = {
-        fullname,
-        username,
+        nombreCliente,
+        userNameCliente,
         email,
         password
     };
+    console.log(newUser);
     newUser.password = await helpers.encryptPassword(password);
     const result = await pool.query('INSERT INTO tabla_cliente SET ?', [newUser]);
     newUser.id = result.insertId;
