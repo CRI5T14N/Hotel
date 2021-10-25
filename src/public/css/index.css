@@ -44,6 +44,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
+    border: 1px solid #000;
 }
 
 .main-container div h2 {
@@ -55,6 +56,7 @@
     color: #000;
 }
 
-.main-container div:hover {
-    box-shadow: 0 0 15px #000;
+.main-container div img:hover, h2:hover > img {
+    box-shadow: 0 0 5px #000;
+    opacity: 0.9;
 }

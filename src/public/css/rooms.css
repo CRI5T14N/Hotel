@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: minmax(1000px, 1fr);
     grid-template-rows: repeat(4, 450px);
-    grid-row-gap: 40px;
+    grid-row-gap: 50px;
     position: relative;
 }
 
@@ -39,6 +39,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
+    border: 1px solid #000;
 }
 
 
@@ -71,6 +72,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
+    border: 1px solid #000;
 }
 
 
@@ -104,6 +106,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
+    border: 1px solid #000;
 }
 
 .quadruple-rooms-container {
@@ -135,6 +138,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
+    border: 1px solid #000;
 }
 
 
@@ -157,5 +161,7 @@
 
 .send {
     margin: 5px 0 0;
-    width: 100px;
+    width: 150px;
+    font-size: 25px;
+
 }
