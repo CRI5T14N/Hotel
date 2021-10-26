@@ -16,5 +16,8 @@ router.get('/profile', (req, res) => {
     res.send('Profile');
 });
 
+router.get('/login', (req, res) => {
+    res.render('user/login');
+});
 
 module.exports = router;

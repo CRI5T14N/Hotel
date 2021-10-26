@@ -4,22 +4,22 @@
 
 <div class="container">
     <div class="room-container">
-        <div class="room-title">Habitación {{tipo.tipo_habitacion}}</div>
+        <div class="room-title">Habitación {{habs.tipo_habitacion}}</div>
         <div class="room-img">
-            <img src="{{h.url_img1}}" alt="">
-            <img src="{{h.url_img2}}" alt="">
+            <img src="{{habs.url_img1}}" alt="">
+            <img src="{{habs.url_img2}}" alt="">
         </div>
         <div class="room-description">
             <div class="room-desc">
-                <h2>Habitación {{tipo.tipo_habitacion}}</h2>
-                <h3>Q{{h.precio_Normal}} por día!</h3>
+                <h2>Habitación {{habs.tipo_habitacion}}</h2>
+                <h3>Q{{habs.precio_normal}} por día!</h3>
             </div>
             <form action="/reservar/add" method="POST">
                 <div class="btn-container">
                     <button class="button-reserva">Reservar</button>
-                    <input type="text" value="{{h.id_Habitacion}}" readonly="readonly" class="id" name="id">
-                    <input type="text" name="img1" value="{{h.url_img1}}" class="id" readonly="readonly">
-                    <input type="text" name="img2" value="{{h.url_img2}}" class="id" readonly="readonly">
+                    <input type="text" value="{{habs.id_habitacion}}" readonly="readonly" class="ids" name="id">
+                    <input type="text" name="img1" value="{{habs.url_img1}}" class="ids" readonly="readonly">
+                    <input type="text" name="img2" value="{{habs.url_img2}}" class="ids" readonly="readonly">
                 </div>
             </form>
         </div>
