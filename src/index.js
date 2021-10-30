@@ -44,6 +44,7 @@ app.use(require('./routes'));
 app.use(require('./routes/authentication'));
 app.use('/reservar', require('./routes/reservar'));
 app.use('/habitaciones', require('./routes/habitaciones'));
+app.use('/habitacion', require('./routes/habitacion'));
 
 //Public
 

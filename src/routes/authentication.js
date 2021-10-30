@@ -2,12 +2,12 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport');
 
-router.get('/signup', (req, res) => {
+router.get('/registro', (req, res) => {
     res.render('user/checkin');
 });
 
 
-router.post('/signup', passport.authenticate('local.signup', {
+router.post('/registro', passport.authenticate('local.signup', {
     successRedirect: '/profile',
     failureRedirect: '/signup'
 }));

@@ -1,0 +1,56 @@
+.container {
+    width: 750px;
+    height: 100%;
+    margin: 80px auto 0;
+    background: #eeea;
+    border-radius: 5px;
+    padding: 25px 0;
+    border: 1px solid #333;
+}
+
+.check {
+    width: 290px;
+    height: 290px;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.icon-success {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 290px;
+	height: 290px;
+	background-color: #52b358;
+	border-radius: 50%;
+}
+
+.icon-success::after {
+	content: '✓';
+	color: #fff;
+	font-size: 240px;
+	font-weight: bold;
+}
+
+.info {
+    text-align: center;
+    font-size: 40px;
+    padding: 10px 0 10px;
+}
+
+.div-button {
+    margin: auto;
+    width: 300px;
+    padding-bottom: 10px;
+}
+
+.btn-link {
+    text-decoration: none;
+}
+
+.aceptar {
+    display: flex;
+    margin: auto;
+    font-size: 30px;
+    padding: 5px 10px 0;
+}

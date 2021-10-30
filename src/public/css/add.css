@@ -67,3 +67,7 @@
 .confirm-button:active {
     background: #000;
 }
+
+.datos {
+    display: none;
+}

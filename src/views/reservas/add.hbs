@@ -14,7 +14,7 @@
 
     <div class="form-container">
         <div class="form-container-2">
-            <form action="/reservas/add" method="post">
+            <form action="/habitacion/agregada" method="post">
                 <div class="fe-cont">
                     <label class="date">Fecha de Entrada:</label>
                     <input type="date" class="date" name="fecha_entrada">
@@ -22,6 +22,13 @@
                 <div class="fs-cont">
                     <label class="date">Fecha de Salida:</label>
                     <input type="date" class="date" name="fecha_salida">
+                </div>
+                <div class="he-cont">
+                    <label class="date">Hora de Entrada</label>
+                    <input type="time" name="hora_entrada" class="date">
+                </div>
+                <div class="datos">
+                    <input type="text" name="id_Habitacion" value="{{datos.id}}">
                 </div>
                 <div class="button-cont">
                     <button class="confirm-button">

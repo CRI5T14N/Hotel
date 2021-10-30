@@ -14,7 +14,7 @@
                 <h2>Habitación {{habs.tipo_habitacion}}</h2>
                 <h3>Q{{habs.precio_normal}} por día!</h3>
             </div>
-            <form action="/reservar/add" method="POST">
+            <form action="/habitacion/reservar" method="POST">
                 <div class="btn-container">
                     <button class="button-reserva">Reservar</button>
                     <input type="text" value="{{habs.id_habitacion}}" readonly="readonly" class="ids" name="id">
