@@ -54,3 +54,31 @@ INNER JOIN tabla_tipo_habitacion as tph
 ON th.id_tipo_habitacion = tph.id_tipo;
 
 SELECT * FROM vista_habitacion;
+
+INSERT INTO tabla_cliente
+	(userNameCliente, nombreCliente, email, password)
+	VALUES
+	('CR15T14N', 'Cristián Rivera', 'cristian@gmail.com', '123456');
+
+INSERT INTO tabla_reserva
+	(id_Cliente)
+    VALUES (1);
+
+INSERT INTO tabla_habitacion 
+	(id_tipo_habitacion, precio_Normal, precio_Weekend, precio_Especial, url_img1, url_img2, estado)
+    VALUES
+    (1, 100, 150, 175, '/img/simple1.jpg', '/img/simple1-1.jpg', 1),
+    (1, 150, 200, 250, '/img/simple2.jpg', '/img/simple2.jpg', 1),
+    (1, 170, 180, 210, '/img/simple3.jpg', '/img/simple3.jpg', 1),
+    (2, 250, 300, 325, '/img/doble1.jpg', '/img/doble1.jpg', 1),
+    (2, 230, 315, 340, '/img/doble2.jpg', '/img/doble2.jpg', 1),
+    (2, 275, 350, 375, '/img/doble3.jpg', '/img/doble3.jpg', 1);
+
+INSERT INTO tabla_tipo_habitacion
+	(tipo_habitacion)
+    VALUES
+    ('Simple'),
+    ('Doble'),
+    ('Triple'),
+    ('Cuádruple');
+

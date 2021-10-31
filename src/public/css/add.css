@@ -1,15 +1,26 @@
-.info-container {
+
+.info-container, .vehicle-container, .desayuno-container, .service-container, .traslado-container {
     width: 1300px;
-    padding: 40px 35px 0 35px;
+    padding: 30px 35px 0 35px;
 }
 
-.room-title {
-    text-align: center;
-    margin-bottom: 20px;
+.r-title {
+    padding: 35px 35px 0;
     font-size: 50px;
+}
+
+.rtitle {
+    text-align: center;
     background: #111;
     color: #eee;
     border-radius: 5px;
+}
+
+.room-title, .vehicle-title, .desayuno-title, .service-title, .traslado-title {
+    text-align: center;
+    margin: 0 0 20px;
+    font-size: 30px;
+    color: #111;
 }
 
 .room-img {
@@ -27,13 +38,11 @@
     border: 1px solid #444;
 }
 
-.form-container {
-    padding: 30px 35px 25px 35px;
-    position: relative;
+.reserv-container {
+    border-bottom: 2px solid #000;
 }
 
 .form-container-2 {
-    border: 1px solid #000;
     padding: 15px 20px;
 }
 
@@ -70,4 +79,12 @@
 
 .datos {
     display: none;
+}
+
+.vehicle-info {
+    padding: 0 0 10px 0;
+}
+
+.info {
+    padding: 15px 50px;
 }
