@@ -23,14 +23,22 @@ router.post('/reservar', (req, res) => {
 //Reservar
 /*router.post('/agregada', async (req, res) => {
     const { id_Habitacion, fecha_entrada, fecha_salida } = req.body;
-    const id_Reserva = 1;
+    const id_Cliente = 4;
     const newReserva = {
+        id_Cliente
+    };
+
+    const reserva = await pool.query('INSERT INTO tabla_reserva SET ?', [newReserva]);
+    id_Reserva = reserva.id_Reserva;
+
+    const newReservas = {
         id_Reserva,
         id_Habitacion,
         fecha_entrada,
         fecha_salida
     };
-    const reserva_hab = await pool.query('INSERT INTO tabla_reserva_habitacion SET ?', newReserva);
+    console.log(newReservas);
+    //const reserva_hab = await pool.query('INSERT INTO tabla_reserva_habitacion SET ?', [newReservas]);
     res.render('reservas/reservada');
     //Aquí Git
 });*/
