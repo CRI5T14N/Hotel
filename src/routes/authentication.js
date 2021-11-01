@@ -9,7 +9,7 @@ router.get('/registro', (req, res) => {
 
 router.post('/registro', passport.authenticate('local.signup', {
     successRedirect: '/profile',
-    failureRedirect: '/signup'
+    failureRedirect: '/registro'
 }));
 
 router.get('/profile', (req, res) => {
@@ -19,5 +19,19 @@ router.get('/profile', (req, res) => {
 router.get('/login', (req, res) => {
     res.render('user/login');
 });
+
+router.get('/registrar-usuario', (req, res) => {
+    res.render('user/admin-checkin');
+});
+
+router.post('/registrar-usuario', passport.authenticate('local.signup', {
+    successRedirect: '/profile',
+    failureRedirect: '/registrar-usuario'
+}));
+
+/*router.post('/registrar-usuario', passport.authenticate('local.signup', {
+    successRedirect: '/profile',
+    failureRedirect: '/signup'
+}));*/
 
 module.exports = router;

@@ -1,0 +1,28 @@
+<link rel="stylesheet" type="text/css" href="css/admin-checkin.css">
+
+<div class="checkin-container">
+    <h1>Registrarse</h1>
+    <form action="/registrar-usuario" method="POST">
+        <label for="nombreCliente">Nombre</label>
+        <input type="text" placeholder="name" name="nombreUsuario" autofocus required>
+
+        <label for="userNameCliente">Nombre de Usuario</label>
+        <input type="text" placeholder="username" name="userNameUsuario" required>
+
+        <label for="email">Email</label>
+        <input type="email" placeholder="email" name="email" required>
+
+        <label for="usuario">Tipo de Usuario</label>
+        <select name="usuario" class="select-rol">
+            <option value="1">Cliente</option> 
+            <option value="2">Recepcionista</option> 
+            <option value="3">Ama de LLaves</option>
+            <option value="4">Administrador</option>
+        </select>
+
+        <label for="password">Contraseña</label>
+        <input type="password" placeholder="password" name="password" required>
+
+        <input type="submit" value="Registrar">
+    </form>
+</div>
