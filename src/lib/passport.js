@@ -8,27 +8,16 @@ passport.use('local.signup', new LocalStrategy({
     passwordField: 'password',
     passReqToCallback: true
 }, async (req, email, password, done) => {
-    const { nombreUsuario, userNameUsuario, usuario } = req.body;
+    const { nombreCliente, userNameCliente } = req.body;
     const newUser = {
-        nombreUsuario,
-        userNameUsuario,
+        nombreCliente,
+        userNameCliente,
         email,
         password
     };
     newUser.password = await helpers.encryptPassword(password);
-    if(usuario == 1) {
-        const result = await pool.query('INSERT INTO tabla_cliente SET ?', [newUser]);
-        newUser.id = result.insertId;
-    } else if (usuario == 2) {
-        const result = await pool.query('INSERT INTO tabla_recepcionista SET ?', [newUser]);
-        newUser.id = result.insertId;
-    } else if (usuario == 3 ) {
-        const result = await pool.query('INSERT INTO tabla_ama SET ?', [newUser]);
-        newUser.id = result.insertId;
-    } else if (usuario == 4 ) {
-        const result = await pool.query('INSERT INTO tabla_admin SET ?', [newUser]);
-        newUser.id = result.insertId;
-    }
+    const result = await pool.query('INSERT INTO tabla_cliente SET ?', [newUser]);
+    newUser.id = result.insertId;
     return done(null, newUser);
 }));
 

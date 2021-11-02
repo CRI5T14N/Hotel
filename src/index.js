@@ -10,6 +10,7 @@ const passport = require('passport');
 
 const app = express();
 require('./lib/passport');
+//require('./lib/passportuser');
 
 //Settings
 

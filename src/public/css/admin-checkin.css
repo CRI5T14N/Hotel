@@ -76,10 +76,9 @@
 .select-rol {
     border: 1px solid #000;
     outline: none;
-    height: 40px;
+    height: 30px;
+    background-color: #fff8;
     color: #000;
-    font-size: 16px;
-    padding: 0;
     width: 100%;
     margin-bottom: 20px;
 }   

@@ -12,13 +12,6 @@ CREATE TABLE tabla_cliente (
     `numTarjetaCredito` VARCHAR(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO tabla_cliente
-	(userNameCliente, nombreCliente, email, password)
-	VALUES
-	('Naruto', 'Naruto Uzumaki', 'naruto@gmail.com', '123456'),
-    ('Sasuke', 'Sasuke Uchiha', 'sasuke@gmail.com', '123456'),
-    ('Luffy', 'Monkey D. Luffy', 'luffy@gmail.com', '123456'),
-    ('Ichigo', 'Ichigo Kurosaki', 'ichigo@gmail.com', '123456');
 
 CREATE TABLE tabla_reserva (
 	`id_Reserva` INT PRIMARY KEY AUTO_INCREMENT,
