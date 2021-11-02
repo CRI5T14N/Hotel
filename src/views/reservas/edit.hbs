@@ -1,0 +1,166 @@
+<link rel="stylesheet" type="text/css" href="/css/edit.css">
+
+{{> navigation}}
+
+<div class="container">
+    <form action="" method="post">
+        <div class="habitacion-container">
+            <div class="r-title">                
+                <div class="rtitle">Reservación</div>
+                <div class="editar">
+                    <label for="">Código de Reservación:</label>
+                    <input type="num" name="id_Reserva" placeholder="codigo">
+                    <button class="btn-editar">Editar</button>
+                </div>
+            </div>
+            
+            <div class="info-container">
+                <div class="reserv-container">
+                    <div class="room-title">Reservar Habitación</div>
+                    <div class="room-img">
+                        <img src="{{datos.img1}}" alt="">
+                        <img src="{{datos.img2}}" alt="">
+                    </div>
+                    <div class="form-container-2">
+                        <div class="fe-cont">
+                            <label class="date">Fecha Entrada:</label>
+                            <input type="date" min="2021-10-31" class="date" name="fecha_entrada" required>
+                        </div>
+                        <div class="fs-cont">
+                            <label class="date">Fecha de Salida:</label>
+                            <input type="date" class="date" name="fecha_salida" required>
+                        </div>
+                        <input type="text" name="id_Habitacion" class="datos" value="{{datos.id}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="vehicle-container">
+            <div class="reserv-container">
+                <div class="vehicle-title">Rentar Vehiculo (Opcional)</div>
+                <div class="vehicle-info">
+                    <div class="info">
+                        <label for="tipo_vehiculo">Escoger Vehiculo</label>
+                        <select name="tipo_vehiculo">
+                            <option value="1"></option> 
+                            <option value="2">BMW</option> 
+                            <option value="3">Windows XP</option>
+                            <option value="10">Fedora</option> 
+                            <option value="11">Debian</option> 
+                            <option value="12">Suse</option>
+                        </select>
+                    </div>
+                    <div class="info">
+                        <label for="">Fecha de Entrega</label>
+                        <input type="date" name="fecha_entrega" class="">
+                        <label for="">Fecha de Devolución</label>
+                        <input type="date" name="fecha_salida" class="">
+                    </div>
+                    <div class="info">
+                        <label for="">Dias de Renta</label>
+                        <input type="number" name="dias">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="desayuno-container">
+            <div class="reserv-container">
+                <div class="desayuno-title">Reservar Desayuno (Opcional)</div>
+                <div class="desayuno-info">
+                    <div class="info">
+                        <label for="">Escoger Desayuno</label>
+                        <select name="tipo_desayuno">
+                            <option value="1">Panqueques</option> 
+                            <option value="2">Windows 7</option> 
+                            <option value="3">Windows XP</option>
+                            <option value="10">Fedora</option> 
+                            <option value="11">Debian</option> 
+                            <option value="12">Suse</option>
+                        </select>
+                    </div>
+                    <div class="info">
+                        <label for="">Cantidad</label>
+                        <input type="number" class="" name="cantidad">
+                    </div>
+                    <div class="info">
+                        <label for="">Fecha y Hora</label>
+                        <input type="datetime-local" name="fecha_hora">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="service-container">
+            <div class="reserv-container">
+                <div class="service-title">Reservar Servicio (Opcional)</div>
+                <div class="service-info">
+                    <div class="info">
+                        <label for="">Escoger Servicio</label>
+                        <select name="tipo_servicio">
+                            <option value="1"></option> 
+                            <option value="2">Windows 7</option> 
+                            <option value="3">Windows XP</option>
+                            <option value="10">Fedora</option> 
+                            <option value="11">Debian</option> 
+                            <option value="12">Suse</option>
+                        </select>
+                    </div>
+                    <div class="info">
+                        <label for="">Fecha y Hora</label>
+                        <input type="datetime-local" name="fecha_hora">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="traslado-container">
+            <div class="reserv-container">
+                <div class="traslado-title">Reservar Traslado (Opcional)</div>
+                <div class="traslado-info">
+                    <div class="info">
+                        <label for="">Desde: </label>
+                        <select name="traslado_desde">
+                            <option value="1"></option> 
+                            <option value="2">Windows 7</option> 
+                            <option value="3">Windows XP</option>
+                            <option value="10">Fedora</option> 
+                            <option value="11">Debian</option> 
+                            <option value="12">Suse</option>
+                        </select>
+                        <label for="">Hacia: </label>
+                        <select name="traslado_hacia">
+                            <option value="1"></option> 
+                            <option value="2">Windows 7</option> 
+                            <option value="3">Windows XP</option>
+                            <option value="10">Fedora</option> 
+                            <option value="11">Debian</option> 
+                            <option value="12">Suse</option>
+                        </select>
+                    </div>
+                    <div class="info">
+                        <label for="">Fecha y Hora</label>
+                        <input type="datetime-local" name="fecha_hora">
+                    </div>
+                    <div class="info">
+                        <label for="">Cantidad de Personas</label>
+                        <input type="number" name="cantPersonas">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-cont">
+            <button class="confirm-button">
+                Confirmar
+            </button>
+        </div>
+
+    </form>            
+</div>
+
+{{> footer}}

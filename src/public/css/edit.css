@@ -1,0 +1,106 @@
+
+.info-container, .vehicle-container, .desayuno-container, .service-container, .traslado-container {
+    width: 1300px;
+    padding: 30px 35px 0 35px;
+}
+
+.r-title {
+    padding: 35px 35px 0;
+    font-size: 50px;
+}
+
+.rtitle {
+    text-align: center;
+    background: #111;
+    color: #eee;
+    border-radius: 5px;
+}
+
+.room-title, .vehicle-title, .desayuno-title, .service-title, .traslado-title {
+    text-align: center;
+    margin: 0 0 20px;
+    font-size: 30px;
+    color: #111;
+}
+
+.room-img {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px;
+    grid-column-gap: 20px;
+}
+
+.room-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #444;
+}
+
+.reserv-container {
+    border-bottom: 2px solid #000;
+}
+
+.form-container-2 {
+    padding: 15px 20px;
+}
+
+.fe-cont, .fs-cont {
+    display: inline-block;
+    padding: 5px;
+    width: 49%;
+}
+
+.date {
+    font-size: 25px;
+}
+
+.button-cont {
+    padding: 20px 0 10px;
+}
+
+.confirm-button {
+    display: block;
+    margin: auto;
+    font-size: 30px;
+    padding: 10px 15px;
+    background: #222;
+    color: #eee;
+}
+
+.confirm-button:hover {
+    background: #111;
+}
+
+.confirm-button:active {
+    background: #000;
+}
+
+.datos {
+    display: none;
+}
+
+.vehicle-info {
+    padding: 0 0 10px 0;
+}
+
+.info {
+    padding: 15px 50px;
+}
+
+.editar {
+    font-size: 35px;
+    padding: 30px 0 0;
+    display: flex;
+}
+
+.editar input {
+    width: 600px;
+    margin: 0 0 0 20px;
+}
+
+.btn-editar {
+    margin-left: auto;
+    width: 180px;
+}
