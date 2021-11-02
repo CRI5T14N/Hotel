@@ -12,7 +12,6 @@ CREATE TABLE tabla_cliente (
     `numTarjetaCredito` VARCHAR(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-
 CREATE TABLE tabla_reserva (
 	`id_Reserva` INT PRIMARY KEY AUTO_INCREMENT,
     `id_Cliente` int (10) NOT NULL,
@@ -72,3 +71,15 @@ ON th.id_tipo_habitacion = tph.id_tipo;
 
 SELECT * FROM vista_habitacion;
 DROP VIEW vista_habitacion;
+
+SELECT * FROM tabla_reserva_habitacion;
+CREATE TABLE tabla_reserva_habitacion (
+	`id_Reserva_Habitacion` INT PRIMARY KEY AUTO_INCREMENT,
+    `id_Habitacion` int (10) NOT NULL,
+    `id_Reserva` int (10) NOT NULL,
+    `fecha_reservacion` timestamp NOT NULL DEFAULT current_timestamp,
+    `fecha_entrada` datetime NOT NULL,
+    `fecha_salida` datetime NOT NULL,
+    CONSTRAINT fk_Habitacion FOREIGN KEY (id_Habitacion) REFERENCES tabla_habitacion(id_Habitacion),
+    CONSTRAINT fk_Reserva FOREIGN KEY (id_Reserva) REFERENCES tabla_reserva(id_Reserva)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
