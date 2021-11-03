@@ -13,6 +13,7 @@
             <div class="room-desc">
                 <h2>Habitación {{habs.tipo_habitacion}}</h2>
                 <h3>Q{{habs.precio_normal}} por día!</h3>
+                <label for="" class="estado">{{habs.disp}}</label>
             </div>
             <form action="/habitacion/reservar" method="POST">
                 <div class="btn-container">

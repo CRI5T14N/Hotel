@@ -46,6 +46,7 @@ app.use(require('./routes/authentication'));
 app.use('/reservaciones', require('./routes/reservaciones'));
 app.use('/habitaciones', require('./routes/habitaciones'));
 app.use('/habitacion', require('./routes/habitacion'));
+app.use('/vehiculos', require('./routes/vehiculos'));
 
 //Public
 
