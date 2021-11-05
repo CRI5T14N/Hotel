@@ -8,26 +8,39 @@ router.get('/registro', (req, res) => {
 
 
 router.post('/registro', passport.authenticate('local.signup', {
-    successRedirect: '/profile',
+    successRedirect: '/reservas',
     failureRedirect: '/registro'
 }));
 
 router.get('/profile', (req, res) => {
-    res.send('Profile');
+    res.render('profile');
 });
+
 
 router.get('/login', (req, res) => {
     res.render('user/login');
 });
 
+router.post('/login', (req, res, next) => {
+    passport.authenticate('local.signin', {
+        successRedirect: '/reservas',
+        failureRedirect: '/login',
+        failureFlash: true
+    })(req, res, next);
+});
+
+
+
+
+
 router.get('/registrar-usuario', (req, res) => {
     res.render('user/admin-checkin');
 });
 
-router.post('/registrar-usuario', passport.authenticate('local.signup', {
+/*router.post('/registrar-usuario', passport.authenticate('local.signup', {
     successRedirect: '/profile',
     failureRedirect: '/registrar-usuario'
-}));
+}));*/
 
 /*router.post('/registrar-usuario', passport.authenticate('local.signup', {
     successRedirect: '/profile',

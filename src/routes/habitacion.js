@@ -53,7 +53,8 @@ router.post('/agregada', async (req, res) => {
     }
     
     const reserva_hab = await pool.query('INSERT INTO tabla_reserva_habitacion SET ?', [newReservaH]);
-
+    const update = await pool.query('UPDATE tabla_habitacion set estado = 2 WHERE id_habitacion = ?', [id_Habitacion]);
+    console.log(update)
     if( id_Vehiculo != 0 && fecha_entrada != '' && fecha_devolucion != '' && dias_v != '') {
         console.log(newReservaV);
         const reserva_v = await pool.query('INSERT INTO tabla_rentar_vehiculo SET ?', [newReservaV]);
@@ -62,8 +63,20 @@ router.post('/agregada', async (req, res) => {
     res.render('reservas/reservada');
 });
 
-router.get('/editar', (req, res) => {
-    res.render('reservas/edit')
+router.get('/editar/:id_Reserva', async (req, res) => {
+    const { id_Reserva } = req.params;
+    const result = await pool.query('SELECT * FROM vista_reserva_habitacion WHERE id_Reserva = ?', [id_Reserva]);
+    datos = result[0];
+    console.log(result);
+    res.render('reservas/edit', {datos});
+});
+
+router.post('/editar', async (req, res) => {
+    const { id_Reserva } = req.body;
+    const result = await pool.query('SELECT * FROM vista_reserva WHERE id_Reserva = ?', [id_Reserva]);
+    datos = result[0];
+    console.log(datos);
+    res.render('reservas/edit', {datos});
 });
 
 module.exports = router;

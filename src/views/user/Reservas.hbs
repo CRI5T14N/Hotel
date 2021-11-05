@@ -1,0 +1,26 @@
+<link rel="stylesheet" type="text/css" href="css/reservas.css">
+
+{{> navigation}}
+
+<div class="container">
+    <div class="list">
+        <h2>Reservas</h2>
+        {{#each reservas}}
+            
+            <div class="datos">
+                <h3><a href="/habitacion/editar/{{id_Reserva}}">Reservación {{id_Reserva}}</a></h3>
+                <div class="tiempo"><p>{{timeago fecha_reservacion}}</p></div>
+            </div>
+            
+        {{else}}
+
+            <div class="vacio">
+                <h4>No hay Reservas</h4>
+            </div>
+
+        {{/each}}
+    </div>
+</div>
+
+
+{{> footer}}

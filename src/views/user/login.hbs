@@ -2,12 +2,12 @@
 
     <div class="login-container">
         <h1>Acceder</h1>
-        <form >
+        <form action="/login" method="POST">
             <label for="email">Email</label>
-            <input type="email" placeholder="Email" autofocus>
+            <input type="email" placeholder="Email" name="email" autofocus>
 
             <label for="password">Password</label>
-            <input type="password" placeholder="Password">
+            <input type="password" placeholder="Password" name="password">
 
             <input type="submit" value="Log In">
 
