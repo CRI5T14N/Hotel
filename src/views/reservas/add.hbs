@@ -18,12 +18,12 @@
                     </div>
                     <div class="form-container-2">
                         <div class="fe-cont">
-                            <label class="date">Fecha Entrada:</label>
-                            <input type="date" min="2021-10-31" class="date" name="fecha_entrada" required>
+                            <label class="date">Fecha Entrada: </label>
+                            <input type="date" min="2021-11-05" class="date" name="fecha_entrada" required>
                         </div>
                         <div class="fs-cont">
-                            <label class="date">Fecha de Salida:</label>
-                            <input type="date" class="date" name="fecha_salida" required>
+                            <label class="date">Fecha de Salida: </label>
+                            <input type="date" min="2021-11-05" class="date" name="fecha_salida" required>
                         </div>
                         <input type="text" name="id_Habitacion" class="datos" value="{{datos.id}}">
                     </div>
@@ -36,7 +36,7 @@
                 <div class="vehicle-title">Rentar Vehiculo (Opcional)</div>
                 <div class="vehicle-info">
                     <div class="info">
-                        <label for="tipo_vehiculo">Escoger Vehiculo</label>
+                        <label for="tipo_vehiculo">Escoger Vehiculo: </label>
                         <select name="id_Vehiculo">
                             <option value="0"></option> 
                             <option value="1">BMW</option> 
@@ -46,13 +46,13 @@
                         </select>
                     </div>
                     <div class="info">
-                        <label for="">Fecha de Entrega</label>
-                        <input type="date" name="fecha_entrega" class="">
-                        <label for="">Fecha de Devolución</label>
-                        <input type="date" name="fecha_devolucion" class="">
+                        <label for="">Fecha de Entrega: </label>
+                        <input type="date" name="fecha_entrega">
+                        <label for="">Fecha de Devolución: </label>
+                        <input type="date" name="fecha_devolucion">
                     </div>
                     <div class="info">
-                        <label for="">Dias de Renta</label>
+                        <label for="">Dias de Renta: </label>
                         <input type="number" name="dias_v">
                     </div>
                 </div>
@@ -65,23 +65,25 @@
                 <div class="desayuno-title">Reservar Desayuno (Opcional)</div>
                 <div class="desayuno-info">
                     <div class="info">
-                        <label for="">Escoger Desayuno</label>
-                        <select name="tipo_desayuno">
+                        <label for="">Escoger Desayuno: </label>
+                        <select name="id_Desayuno">
+                            <option value="0"></option>
                             <option value="1">Panqueques</option> 
-                            <option value="2">Windows 7</option> 
-                            <option value="3">Windows XP</option>
-                            <option value="10">Fedora</option> 
-                            <option value="11">Debian</option> 
-                            <option value="12">Suse</option>
+                            <option value="2">Omelet</option> 
+                            <option value="3">Huevos</option>
                         </select>
                     </div>
                     <div class="info">
-                        <label for="">Cantidad</label>
-                        <input type="number" class="" name="cantidad">
+                        <label for="">Cantidad: </label>
+                        <input type="number" class="" name="cantidad_Desayuno">
                     </div>
                     <div class="info">
-                        <label for="">Fecha y Hora</label>
-                        <input type="datetime-local" name="fecha_hora">
+                        <label for="">Fecha: </label>
+                        <input type="date" name="fecha_Desayuno">
+                    </div>
+                    <div class="info">
+                        <label for="">Hora: </label>
+                        <input type="time" name="hora_Desayuno">
                     </div>
                 </div>
             </div>
@@ -93,19 +95,18 @@
                 <div class="service-title">Reservar Servicio (Opcional)</div>
                 <div class="service-info">
                     <div class="info">
-                        <label for="">Escoger Servicio</label>
-                        <select name="tipo_servicio">
-                            <option value="1"></option> 
-                            <option value="2">Windows 7</option> 
-                            <option value="3">Windows XP</option>
-                            <option value="10">Fedora</option> 
-                            <option value="11">Debian</option> 
-                            <option value="12">Suse</option>
+                        <label for="">Escoger Servicio: </label>
+                        <select name="id_Servicio">
+                            <option value="0"></option> 
+                            <option value="1">Lavado de Ropa</option> 
+                            <option value="2">Planchado de Ropa</option>
                         </select>
                     </div>
                     <div class="info">
-                        <label for="">Fecha y Hora</label>
-                        <input type="datetime-local" name="fecha_hora">
+                        <label for="">Fecha: </label>
+                        <input type="date" name="fecha_servicio">
+                        <label for="">Hora: </label>
+                        <input type="time" name="hora_servicio">
                     </div>
                 </div>
             </div>
@@ -117,32 +118,24 @@
                 <div class="traslado-title">Reservar Traslado (Opcional)</div>
                 <div class="traslado-info">
                     <div class="info">
-                        <label for="">Desde: </label>
-                        <select name="traslado_desde">
-                            <option value="1"></option> 
-                            <option value="2">Windows 7</option> 
-                            <option value="3">Windows XP</option>
-                            <option value="10">Fedora</option> 
-                            <option value="11">Debian</option> 
-                            <option value="12">Suse</option>
-                        </select>
-                        <label for="">Hacia: </label>
-                        <select name="traslado_hacia">
-                            <option value="1"></option> 
-                            <option value="2">Windows 7</option> 
-                            <option value="3">Windows XP</option>
-                            <option value="10">Fedora</option> 
-                            <option value="11">Debian</option> 
-                            <option value="12">Suse</option>
+                        <label for="">Traslado: </label>
+                        <select name="id_traslado">
+                            <option value="0"></option> 
+                            <option value="1">Aeropuerto a Hotel</option> 
+                            <option value="2">Hotel a Aeropuerto</option>
                         </select>
                     </div>
                     <div class="info">
-                        <label for="">Fecha y Hora</label>
-                        <input type="datetime-local" name="fecha_hora">
+                        <label for="">Fecha: </label>
+                        <input type="date" name="fecha_traslado">
                     </div>
                     <div class="info">
-                        <label for="">Cantidad de Personas</label>
-                        <input type="number" name="cantPersonas">
+                        <label for="">Hora: </label>
+                        <input type="time" name="hora_traslado">
+                    </div>
+                    <div class="info">
+                        <label for="">Cantidad de Personas: </label>
+                        <input type="number" name="cantidad_personas">
                     </div>
                 </div>
             </div>

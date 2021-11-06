@@ -3,17 +3,10 @@
 {{> navigation}}
 
 <div class="container">
-        
-    <form action="" method="POST">
-        <div class="r-title">                
-            <div class="rtitle">Reservación</div>
-            <div class="editar">
-                <label for="">Código de Reservación:</label>
-                <input type="num" name="id_Reserva" placeholder="codigo">
-                <button class="btn-editar">Editar</button>
-            </div>
-        </div>
-    </form>
+
+    <div class="r-title">                
+        <div class="rtitle">Reservación</div>
+    </div>
 
     <form action="" method="POST">
             <div class="habitacion-container">
@@ -28,11 +21,11 @@
                     <div class="form-container-2">
                         <div class="fe-cont">
                             <label class="date">Fecha Entrada:</label>
-                            <input type="datetime" min="2021-10-31" class="date" name="fecha_entrada" required value="{{timeago datos.fecha_Entrada}}">
+                            <input type="date" min="2021-11-05" class="date" name="fecha_entrada" required value="{{datos.fecha_entrada}}">
                         </div>
                         <div class="fs-cont">
                             <label class="date">Fecha de Salida:</label>
-                            <input type="datetime-local" class="date" name="fecha_salida" required value="{{datos.fecha_Salida}}">
+                            <input type="date" min="2021-11-05" class="date" name="fecha_salida" required value="{{datos.fecha_salida}}">
                         </div>
                         <input type="text" name="id_Habitacion" class="datos" value="{{datos.id}}">
                     </div>
@@ -62,7 +55,7 @@
                     </div>
                     <div class="info">
                         <label for="">Dias de Renta</label>
-                        <input type="number" name="dias" value="{{datos.dias_v}}">
+                        <input type="number" name="dias_v" value="{{datos.dias_v}}">
                     </div>
                 </div>
             </div>
@@ -74,22 +67,24 @@
                 <div class="desayuno-info">
                     <div class="info">
                         <label for="">Escoger Desayuno</label>
-                        <select name="tipo_desayuno">
+                        <select name="id_Desayuno" value="{{datos.id_Desayuno}}">
+                            <option value="0"></option>
                             <option value="1">Panqueques</option> 
-                            <option value="2">Windows 7</option> 
-                            <option value="3">Windows XP</option>
-                            <option value="10">Fedora</option> 
-                            <option value="11">Debian</option> 
-                            <option value="12">Suse</option>
+                            <option value="2">Omelet</option> 
+                            <option value="3">Huevos</option>
                         </select>
                     </div>
                     <div class="info">
                         <label for="">Cantidad</label>
-                        <input type="number" class="" name="cantidad">
+                        <input type="number" class="" name="cantidad_Desayuno" value="{{datos.cantidad_desayuno}}">
                     </div>
                     <div class="info">
-                        <label for="">Fecha y Hora</label>
-                        <input type="datetime-local" name="fecha_hora">
+                        <label for="">Fecha</label>
+                        <input type="date" name="fecha_Desayuno">
+                    </div>
+                    <div class="info">
+                        <label for="">Hora</label>
+                        <input type="time" name="hora_Desayuno" value="{{datos.hora_Desayuno}}">
                     </div>
                 </div>
             </div>
@@ -102,18 +97,17 @@
                 <div class="service-info">
                     <div class="info">
                         <label for="">Escoger Servicio</label>
-                        <select name="tipo_servicio">
-                            <option value="1"></option> 
-                            <option value="2">Windows 7</option> 
-                            <option value="3">Windows XP</option>
-                            <option value="10">Fedora</option> 
-                            <option value="11">Debian</option> 
-                            <option value="12">Suse</option>
+                        <select name="id_Servicio">
+                            <option value="0"></option> 
+                            <option value="1">Lavado de Ropa</option> 
+                            <option value="2">Planchado de Ropa</option>
                         </select>
                     </div>
                     <div class="info">
-                        <label for="">Fecha y Hora</label>
-                        <input type="datetime-local" name="fecha_hora">
+                        <label for="">Fecha</label>
+                        <input type="date" name="fecha_servicio" value="{{datos.fecha_servicio}}">
+                        <label for="">Hora</label>
+                        <input type="time" name="hora_servicio" value="{{datos.hora_servicio}}">
                     </div>
                 </div>
             </div>
@@ -125,32 +119,24 @@
                 <div class="traslado-title">Reservar Traslado (Opcional)</div>
                 <div class="traslado-info">
                     <div class="info">
-                        <label for="">Desde: </label>
-                        <select name="traslado_desde">
-                            <option value="1"></option> 
-                            <option value="2">Windows 7</option> 
-                            <option value="3">Windows XP</option>
-                            <option value="10">Fedora</option> 
-                            <option value="11">Debian</option> 
-                            <option value="12">Suse</option>
-                        </select>
-                        <label for="">Hacia: </label>
-                        <select name="traslado_hacia">
-                            <option value="1"></option> 
-                            <option value="2">Windows 7</option> 
-                            <option value="3">Windows XP</option>
-                            <option value="10">Fedora</option> 
-                            <option value="11">Debian</option> 
-                            <option value="12">Suse</option>
+                        <label for="">Traslado: </label>
+                        <select name="id_traslado">
+                            <option value="0"></option> 
+                            <option value="1">Aeropuerto a Hotel</option> 
+                            <option value="2">Hotel a Aeropuerto</option>
                         </select>
                     </div>
                     <div class="info">
-                        <label for="">Fecha y Hora</label>
-                        <input type="datetime-local" name="fecha_hora">
+                        <label for="">Fecha: </label>
+                        <input type="date" name="fecha_traslado" value="{{datos.fecha_traslado}}">
                     </div>
                     <div class="info">
-                        <label for="">Cantidad de Personas</label>
-                        <input type="number" name="cantPersonas">
+                        <label for="">Hora: </label>
+                        <input type="time" name="hora_traslado" value="{{datos.hora_traslado}}">
+                    </div>
+                    <div class="info">
+                        <label for="">Cantidad de Personas: </label>
+                        <input type="number" name="cantidad_personas" value="{{datos.cantidad_personas}}">
                     </div>
                 </div>
             </div>

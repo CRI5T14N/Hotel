@@ -1,4 +1,5 @@
 h2, h3 {
+    padding: 15px 0 0;
     text-align: center;
 }
 
@@ -11,16 +12,18 @@ h3 a:hover {
 }
 
 .list {
-    padding: 17.5px;
+    padding: 0 17.5px 17.5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
 .datos {
-    margin: 15px 16px;
+    margin: 15px auto;
     padding: 15px 0 0 0;
     border: 1px solid #000;
     width: 280px;
     height: 200px;
-    display: inline-block;
     background: #fffd;
 }
 
